@@ -8,6 +8,14 @@
 
 #import <UIKit/UIKit.h>
 
-@interface PickerViewController : UIViewController
+@interface PickerViewController : UIViewController <UIPickerViewDelegate, UIPickerViewDataSource> {
+    IBOutlet UIPickerView * pickerView;
+    IBOutlet UILabel * label;
+    NSMutableArray * data;
+}
+
+-(void)saveDefaults;
+
+-(void)loadDefaults;
 
 @end
